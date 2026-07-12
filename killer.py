@@ -2,14 +2,18 @@ import subprocess
 import sys
 import json
 import time
+from pathlib import Path
 from get_process import get_all_processes
+
+# 脚本所在目录，用于解析同目录下的资源文件，避免依赖调用方的 cwd
+_SCRIPT_DIR = Path(__file__).resolve().parent
 
 def get_kill_process():
     white_list = []
 
-    with open("whitelist-system.json", "r") as f:
+    with open(_SCRIPT_DIR / "whitelist-system.json", "r") as f:
         white_list.extend(json.load(f))
-    with open("whitelist-user.json", "r") as f:
+    with open(_SCRIPT_DIR / "whitelist-user.json", "r") as f:
         white_list.extend(json.load(f))
 
     with open("/proc/self/comm", "r") as f:
