@@ -1,5 +1,4 @@
 import json
-import os
 from get_process import get_all_processes
 
 

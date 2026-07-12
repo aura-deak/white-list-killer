@@ -1,3 +1,4 @@
+import os
 def get_all_processes() -> list[str]:
     """读取系统中所有进程名称"""
     process_names: set[str] = set()

@@ -31,7 +31,7 @@ python main.py
 # 单次清理
 python killer.py
 
-# 循环清理（持续杀死白名单外的进程）
+# 循环清理（持续杀死白名单外的进程）。内置循环不太好用（停不下来），外部调用时建议自行处理循环
 python killer.py loop
 ```
 
