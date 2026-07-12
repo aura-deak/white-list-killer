@@ -1,6 +1,7 @@
 import subprocess
 import sys
 import json
+import time
 from get_process import get_all_processes
 
 def get_kill_process():
@@ -27,3 +28,4 @@ while True:
         subprocess.run(["pkill", "-f", i])
     if not loop:
         break
+    time.sleep(1)
