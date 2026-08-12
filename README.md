@@ -51,10 +51,8 @@ white-list-killer clean --loop
 
 > [!NOTE]
 > 推荐配合 [aura-deak/Curfew](https://github.com/aura-deak/Curfew) 使用，
-> 将 Curfew 的关机命令配置成 `white-list-killer clean --loop`（绝对路径），
+> 将 Curfew 的关机命令配置成 `white-list-killer clean --loop`
 > 可实现定时白名单效果。
-
-> **警告**: `loop` 模式会持续运行并不断杀死不在白名单中的进程，请确保白名单配置正确后再使用。
 
 ## 配置文件
 
